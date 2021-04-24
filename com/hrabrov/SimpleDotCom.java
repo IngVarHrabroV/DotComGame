@@ -4,6 +4,11 @@ public class SimpleDotCom {
     int[] locationCells;
     int numOfHits = 0;
 
+    //setter method for reasign value variable 'locationCells'
+    void setLocationCells(int[] loc) {
+        locationCells = loc;
+    };
+
     public String checkYourself(String stringGuess) {
         int guess = Integer.parseInt(stringGuess); //convert the String type to an int type
 
@@ -29,12 +34,5 @@ public class SimpleDotCom {
         System.out.println(result); // display the result for the user
 
         return result; // return the result back to the calling method
-
-    };
-
-    //setter method for reasign value variable 'locationCells'
-    void setLocationCells(int[] loc) {
-        locationCells = loc;
-    };
-
+    }
 }
