@@ -1,34 +1,28 @@
 package com.hrabrov;
 
-public class SimpleDotCom {
-    int[] locationCells;
-    int numOfHits = 0;
+import java.util.ArrayList;
 
-    //setter method for reasign value variable 'locationCells'
-    void setLocationCells(int[] loc) {
+public class SimpleDotCom {
+    private ArrayList<String> locationCells;
+
+    public void setLocationCells(ArrayList<String> loc) { // setter method for reasign value variable 'locationCells'
         locationCells = loc;
     };
 
-    public String checkYourself(String stringGuess) {
-        int guess = Integer.parseInt(stringGuess); //convert the String type to an int type
-
+    public String checkYourself(String userInput) {
         /* make a variable to hold the result we will return after implementation this method
         * put 'miss' in the default */
         String result = "miss";
 
-        /* repeat with each cell in the locationCells array */
-        for(int cell : locationCells) {
-            if (guess == cell) { //compare user guess to this element (cell) in the array
-                result = "hit";
-                numOfHits++;
-                break;
-            }
-        }
+        int index = locationCells.indexOf(userInput);
 
-        /* we're the loob, but let's see if we're now 'kill' DotCom,
-         and change the value result to 'kill' */
-        if(numOfHits == locationCells.length) {
-            result = "kill";
+        if (index >= 0) {
+            locationCells.remove(index);
+            if (locationCells.isEmpty()) {
+                result = "kill";
+            } else {
+                result = "hit";
+            }
         }
 
         System.out.println(result); // display the result for the user
