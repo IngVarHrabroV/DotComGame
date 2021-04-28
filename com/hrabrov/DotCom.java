@@ -2,7 +2,7 @@ package com.hrabrov;
 
 import java.util.ArrayList;
 
-public class SimpleDotCom {
+public class DotCom {
     private ArrayList<String> locationCells;
 
     public void setLocationCells(ArrayList<String> loc) { // setter method for reasign value variable 'locationCells'
