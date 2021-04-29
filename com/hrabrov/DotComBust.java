@@ -19,7 +19,7 @@ public class DotComBust {
         dotComsList.add(two);
         dotComsList.add(three);
 
-        System.out.println("Your goal is ti sink three DotComs:");
+        System.out.println("Your goal is to sink three DotComs:");
         System.out.println("Pets.com, Go2.com, AskMe.com");
         System.out.println("Try to sink them allin the fewest number of guesses");
 
